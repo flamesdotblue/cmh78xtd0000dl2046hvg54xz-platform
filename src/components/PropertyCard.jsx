@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MapPin, Wifi, Car, Snowflake, Utensils, Heart, MessageCircle } from 'lucide-react'
+import { MapPin, Wifi, Car, Snowflake, Utensils, Heart } from 'lucide-react'
 
 const amenityIcon = (a) => {
   switch (a) {

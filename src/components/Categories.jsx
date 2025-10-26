@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
-import { Home, Building2, Users, BedDouble, House } from 'lucide-react'
+import { Home, Building2, Users, BedDouble } from 'lucide-react'
 
 const categories = [
   { name: 'PG', icon: Home },
   { name: 'Hostel', icon: Building2 },
-  { name: 'Flat', icon: House },
+  { name: 'Flat', icon: Building2 },
   { name: 'Sharing Room', icon: Users },
   { name: 'Apartment', icon: BedDouble },
 ]
@@ -16,7 +16,7 @@ export default function Categories() {
         <h2 className="text-lg font-semibold">Browse by category</h2>
       </div>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
-        {categories.map((c, i) => (
+        {categories.map((c) => (
           <motion.button
             key={c.name}
             whileHover={{ y: -4 }}

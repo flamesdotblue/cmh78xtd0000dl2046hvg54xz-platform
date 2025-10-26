@@ -77,7 +77,7 @@ export default function Hero({ onSearch }) {
           transition={{ duration: 0.6 }}
           className="relative"
         >
-          <div className="relative mx-auto h-72 w-full max-w-lg overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm sm:h-96">
+          <div className="relative mx-auto h-72 w/full max-w-lg overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm sm:h-96">
             <div className="absolute inset-0 grid grid-cols-2 gap-2 p-2">
               <div className="rounded-2xl bg-gradient-to-br from-sky-200 to-sky-50" />
               <div className="rounded-2xl bg-gradient-to-br from-emerald-200 to-emerald-50" />
