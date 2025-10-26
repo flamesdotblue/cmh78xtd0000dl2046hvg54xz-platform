@@ -1,26 +1,32 @@
 import { useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Categories from './components/Categories'
+import PopularListings from './components/PopularListings'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [searchQuery, setSearchQuery] = useState({ city: '', price: '', type: '' })
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-white text-gray-900">
+      <Navbar />
+      <main>
+        <Hero onSearch={setSearchQuery} />
+        <Categories />
+        <PopularListings searchQuery={searchQuery} />
+      </main>
+      <footer className="mt-16 border-t bg-gray-50/60">
+        <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+            <p className="text-sm text-gray-500">© {new Date().getFullYear()} CampusStay. All rights reserved.</p>
+            <div className="flex items-center gap-4 text-sm text-gray-500">
+              <a href="#" className="hover:text-gray-700">Privacy</a>
+              <a href="#" className="hover:text-gray-700">Terms</a>
+              <a href="#" className="hover:text-gray-700">Contact</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
